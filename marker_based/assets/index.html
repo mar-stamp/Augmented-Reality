@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
+    <script src="build/aframe-ar.js"></script>
+
+    <!-- particles system component -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+    <!-- speech command component -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <script src="build/aframe-speech-command-component.js"></script>
+
+
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+<!--DELIVERABLE 2-->
+
+<!--My DPSD code-->
+<a-marker-camera type='pattern' url='assets/pattern-dpsd19121.patt'>
+    <a-text value="Marrria Stampoulou" position="1 1 1"></a-text>
+    <a-image src="assets/jkayyy.png" position="0 0.5 0"></a-image>
+</a-marker>
+
+
+
+<!--H2O code -->
+<!--Hydrogen-->
+    <a-assets>
+    <a-asset-item id="Hmarker" src="assets/Hydrogen.gltf"></a-asset-item>
+    </a-assets>
+    <!--Displaying Hydrogen-->
+    <a-marker type='pattern' url='assets/pattern-card-H.patt'>
+    <!-- Hydrogen model-->
+    <a-entity gltf-model="#Hmarker" scale= "0.2 0.2 0.2";></a-entity>
+    </a-marker>
+
+
+  <!--oxygen-->
+        <a-assets>
+        <a-asset-item id="Omarker" src="assets/oxygen.gltf"></a-asset-item>
+        </a-assets>
+        <!--Displaying oxygen-->
+        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
+        <!-- oxygen model-->
+        <a-entity gltf-model="#Omarker" scale= "0.2 0.2 0.2";></a-entity>
+        </a-marker>
+
+
+
+
+
+
+
+
+        <!--<a-marker preset="hiro">
+            <a-entity id="box" geometry="primitive: box; width: 0.3; depth: 0.3; height: 0.3" position="0 0 0" material="color: #4CC3D9"></a-entity>
+            <a-cylinder id="cylinder" geometry="primitive: cylinder; radius: 0.2; height:0.6" position="0.3 0.3 0.3" material="color: #FFC65D"></a-cylinder>
+            <a-sphere id="sphere" geometry="primitive: sphere; radius: 0.2;" position="-0.3 -0.3 -0.3" material="color: #EF2D5E"></a-sphere>
+            <a-entity id="links" position="0 2.25 -15" maxAge = "20"  maxParticleCount = "3000000" particle-system="preset: snow" visible = "false"
+
+            speech-command__start="command: start; type: attribute; attribute: visible; value: true;"
+            speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;"> >
+              </a-entity>
+              <a-entity id="annyang" annyang-speech-recognition></a-entity>
+            </a-entity>
+         </a-marker>-->
+
+
+            <!--DELIVERABLE 2-->
+
+
+
+
+
+
+
+
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
