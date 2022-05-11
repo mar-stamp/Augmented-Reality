@@ -39,17 +39,80 @@
 
 
 
-<!--DELIVERABLE 2-->
+<body style="margin : 0px; overflow: hidden;">
 
-<!--My DPSD code-->
-<a-marker type="pattern" url="assets/pattern-dpsd19030.patt">
-  <a-entity rotation="-90 0 0" position="0 0 0" >
-    <a-text value="Marrria Stampoulou" align="center" position="0 -1 0" font="Brush Script MT" color="#ffcc00" side="double"></a-text>
-    <a-image src="assets/jkayyy.png" position="0 0 0" width="1" height="1" side="double"></a-image>
-  </a-entity>
+  <!-- Deliverable 2 -->
+     <script>
+         AFRAME.registerComponent("marker-distance", {
+
+             init: function () {
+             this.hydrogen = document.querySelector('#Hydrogen')
+             this.oxygen = document.querySelector('#Oxygen')
+             this.water = document.querySelector('#water')
+             this.marker1 = document.querySelector('#marker1')
+             this.marker2 = document.querySelector('#marker2')
+         },
+         tick: function() 
+         {
+             var marker1Pos, marker2Pos, markerDistance 
+
+             marker1Pos = new THREE.Vector3();
+             this.marker1.object3D.getWorldPosition(marker1Pos);
+
+             marker2Pos = new THREE.Vector3();
+             this.marker2.object3D.getWorldPosition(marker2Pos);
+
+             markerDistance = marker1Pos.distanceTo(marker2Pos);
+
+             if (markerDistance<2) 
+             {
+                 this.hydrogen.setAttribute("visible", false)
+                 this.oxygen.setAttribute("visible", false)
+                 this.water.setAttribute("visible", true)
+             }
+             else 
+             {
+                 this.hydrogen.setAttribute("visible",true) 
+                 this.oxygen.setAttribute("visible",true) 
+                 this.water.setAttribute("visible", false)
+             }
+         },
+     });
+     </script>
+     <a-scene
+ vr-mode-ui="enabled: false;"
+ renderer="logarithmicDepthBuffer: true;"
+ embedded
+ arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+>
+
+<a-entity marker-distance></a-entity>
+
+<a-marker type="pattern" url="assets/pattern-my_dpsd.patt"> 
+     <a-text value="Marrria Stampoulou" position="-1 1.6 0"></a-text>
+     <a-image src="assets/jkayyy.png" position="0 0.5 0"></a-image>
 </a-marker>
 
-<a-marker id="hydrogen" type="pattern" url="assets/pattern-card-H.patt">
+
+<a-asset>
+<a-asset-item  src="assets/Hydrogen.glb"></a-asset-item>
+<a-asset-item  src="assets/water.gltf"></a-asset-item>
+</a-asset>
+
+<a-marker id="marker1" type="pattern" url="assets/pattern-card-H.patt"> 
+ <a-entity id="Hydrogen" gltf-model="#Hydrogen" scale= "0.5 0.5 0.5"  position="0 0.5 0"></a-entity>
+ <a-entity id="water" gltf-model="#water" scale= "0.5 0.5 0.5"  position="0 0.5 0"></a-entity>
+</a-marker>
+
+<a-asset-item  src="assets/Oxygen.glb"></a-asset-item>
+
+<a-marker id="marker2" type="pattern" url="assets/pattern-card-O.patt"> 
+ <a-entity id="Oxygen" gltf-model="#Oxygen" scale= "0.5 0.5 0.5"  position="0 0.5 0"></a-entity>
+</a-marker>
+
+
+
+<!--<a-marker id="hydrogen" type="pattern" url="assets/pattern-card-H.patt">
       <a-image src="assets/card-H.png" position="0 0 0" rotation="-90 0 0" width="1" height="1"></a-image>
       <a-entity gltf-model="assets/hydrogen.glb" position="0 1 0" scale="0.05 0.05 0.05">
       </a-entity>
@@ -58,7 +121,7 @@
 <a-marker id="oxygen" type="pattern" url="assets/pattern-card-O.patt">
       <a-image src="assets/card-O.png" position="0 0 0" rotation="-100 0 0" width="1" height="1"></a-image>
       <a-entity gltf-model="assets/oxygen.glb" position="0 1 0" scale=".09 .09 .09"></a-entity>
-</a-marker>
+</a-marker>-->
 
 
 
