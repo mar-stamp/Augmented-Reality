@@ -20,53 +20,11 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-<!--DELIVERABLE 2-->
 
-<!--My DPSD code-->
-<a-marker-camera type='pattern' url='assets/pattern-my_dpsd.patt'>
-  
-  <a-entity>
-    <a-text value="Marrria Stampoulou" position="1 1 1"></a-text>
-  </a-entity>
-
-  <a-entity>
-    <a-image src="assets/jkayyy.png" position="0 0.5 0"></a-image>
-  </a-entity>
-
-</a-marker>
+  <!--DELIVERABLE 1-->
 
 
-
-<!--H2O code -->
-<!--Hydrogen-->
-    <a-assets>
-    <a-asset-item id="Hmarker" src="assets/Hydrogen.gltf"></a-asset-item>
-    </a-assets>
-    <!--Displaying Hydrogen-->
-    <a-marker type='pattern' url='assets/pattern-card-H.patt'>
-    <!-- Hydrogen model-->
-    <a-entity gltf-model="#Hmarker" scale= "0.2 0.2 0.2";></a-entity>
-    </a-marker>
-
-
-  <!--oxygen-->
-        <a-assets>
-        <a-asset-item id="Omarker" src="assets/oxygen.gltf"></a-asset-item>
-        </a-assets>
-        <!--Displaying oxygen-->
-        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
-        <!-- oxygen model-->
-        <a-entity gltf-model="#Omarker" scale= "0.2 0.2 0.2";></a-entity>
-        </a-marker>
-
-
-
-
-
-
-
-
-        <!--<a-marker preset="hiro">
+  <a-marker preset="hiro">
             <a-entity id="box" geometry="primitive: box; width: 0.3; depth: 0.3; height: 0.3" position="0 0 0" material="color: #4CC3D9"></a-entity>
             <a-cylinder id="cylinder" geometry="primitive: cylinder; radius: 0.2; height:0.6" position="0.3 0.3 0.3" material="color: #FFC65D"></a-cylinder>
             <a-sphere id="sphere" geometry="primitive: sphere; radius: 0.2;" position="-0.3 -0.3 -0.3" material="color: #EF2D5E"></a-sphere>
@@ -74,13 +32,45 @@
 
             speech-command__start="command: start; type: attribute; attribute: visible; value: true;"
             speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;"> >
-              </a-entity>
+            </a-entity>
               <a-entity id="annyang" annyang-speech-recognition></a-entity>
             </a-entity>
-         </a-marker>-->
+  </a-marker>
 
 
-            <!--DELIVERABLE 2-->
+
+<!--DELIVERABLE 2-->
+
+<!--My DPSD code-->
+<a-marker type="pattern" url="assets/pattern-dpsd19030.patt">
+  <a-entity rotation="-90 0 0" position="0 0 0" >
+    <a-text value="Marrria Stampoulou" position="0 -1 0" align="center" color="#ffcc00" font="Brush Script MT" side="double"></a-text>
+    <a-image src="assets/jkayyy.png" position="0 0 0" side="double" width="1" height="1"></a-image>
+  </a-entity>
+</a-marker>
+
+<a-marker id="hydrogen" type="pattern" url="assets/pattern-card-H.patt">
+      <a-image src="assets/card-H.png" position="0 0 0" rotation="-90 0 0" width="1" height="1"></a-image>
+      <a-entity gltf-model="assets/hydrogen.glb" position="0 1 0" scale=".05 .05 .05" animation-mixer="clip: *; loop: repeat; timeScale: 1.5;">
+      </a-entity>
+</a-marker>
+
+<a-marker id="oxygen" type="pattern" url="assets/pattern-card-O.patt">
+      <a-image src="assets/card-O.png" position="0 0 0" rotation="-90 0 0" width="1" height="1"></a-image>
+      <a-entity gltf-model="assets/oxygen.glb" position="0 1 0" scale=".09 .09 .09" animation-mixer="clip: *; loop: repeat;"></a-entity>
+</a-marker>
+
+
+
+
+
+
+
+
+        
+
+
+    
 
 
 
