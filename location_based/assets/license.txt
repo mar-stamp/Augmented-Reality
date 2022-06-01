@@ -1,0 +1,11 @@
+Model Information:
+* title:	N Seoul Tower
+* source:	https://sketchfab.com/3d-models/n-seoul-tower-0a77b5b1c9984cfcbdd7e8e886011cce
+* author:	s3818430 (https://sketchfab.com/s3818430)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "N Seoul Tower" (https://sketchfab.com/3d-models/n-seoul-tower-0a77b5b1c9984cfcbdd7e8e886011cce) by s3818430 (https://sketchfab.com/s3818430) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
