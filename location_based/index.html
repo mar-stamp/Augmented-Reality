@@ -39,14 +39,14 @@
 
     <!--N Tower model-->
       <a-assets>
-             <a-asset-item id="ntower" src="location_based/scene.gltf"></a-asset-item>
+             <a-asset-item id="ntower" src="scene.gltf"></a-asset-item>
       </a-assets>
 
             <a-entity id="ntower_model" position="0 0 -180" class="click"
                       scale="5 5 5"
                       gltf-model="#NTower"
 		                  animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
-                      gps-entity-place="latitude: 37.551170; longitude: 126.988228;" information>
+                      gps-entity-place="latitude: 44.504348; longitude: 11.301027;" information>
             </a-entity>
 
     <!--N Tower Text-->
@@ -63,7 +63,7 @@
 
     <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 37.551170;; simulateLongitude: 126.988228; minDistance: 1; maxDistance: 700;">
+            gps-camera="simulateLatitude: 44.504348; simulateLongitude: 11.301027; minDistance: 1; maxDistance: 700;">
 		</a-camera>
 	</a-scene>
 </body>
