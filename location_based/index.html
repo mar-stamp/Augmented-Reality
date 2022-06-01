@@ -16,19 +16,38 @@
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
 
-        <a-box
-            material="color: red;"
-            scale="20 20 20"
-            gps-entity-place="latitude: 37.551170; longitude: 126.988228;">
-        </a-box>
 
-        <a-asset>
-            <a-asset-item id="NTower" src="magnemite/scene.gltf"></a-asset-item>
-        </a-asset>
+    <a-entity id="cameraRig">
+      <a-entity id="head" camera wasd-controls look-controls cursor="rayOrigin: mouse" position="0 1.6 0"></a-entity>
+    </a-entity>
 
-        <a-camera
+    <!--N Tower model-->
+      <a-assets>
+             <a-asset-item id="ntower" src="assets/scene.gltf"></a-asset-item>
+      </a-assets>
+
+            <a-entity id="ntower_model" position="0 0 -180" class="click"
+                      scale="5 5 5"
+                      gltf-model="#NTower"
+		                  animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
+                      gps-entity-place="latitude: 37.551170; longitude: 126.988228;" information>
+            </a-entity>
+
+    <!--N Tower Text-->
+      <a-text id="text_info" class="clickable" text="value: The 236-meter-tall N Seoul Tower,
+                                                            is a communication and observation tower located on Namsan Mountain in central Seoul, South Korea."
+                                                            
+           position="0 0 -90"
+           color= "#F4D35E"
+           scale="7 7 7"
+           visible="false">
+      </a-text>
+
+
+
+    <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 37.551170; simulateLongitude: 126.988228; minDistance: 1; maxDistance: 700;">
+            gps-camera="simulateLatitude: 37.551170;; simulateLongitude: 126.988228; minDistance: 1; maxDistance: 700;">
 		</a-camera>
 	</a-scene>
 </body>
