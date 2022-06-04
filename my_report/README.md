@@ -28,12 +28,12 @@ First I checked the already existing code and then I checked the a-frame links f
 Συμπερασματικά εκτελώντας και τα τρία deliverables με επιτυχία, πήρα μια ιδέα για το τι είναι επαυξημένη πραγματικότητα και πως αυτή λειτουργεί σε επίπεδο κώδικα. 
 
 # Sources
-```
-https://github.com/aframevr/aframe
-https://github.com/AR-js-org/AR.js
-https://aframe.io/blog/arjs/#customize-your-marker
-https://aframe.io/aframe-school/#/
-https://www.w3schools.com/js/
-https://www.w3schools.com/js/
-https://stackoverflow.com/
-```
+
+- https://github.com/aframevr/aframe
+- https://github.com/AR-js-org/AR.js
+- https://aframe.io/blog/arjs/#customize-your-marker
+- https://aframe.io/aframe-school/#/
+- https://www.w3schools.com/js/
+- https://www.w3schools.com/js/
+- https://stackoverflow.com/
+
